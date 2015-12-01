@@ -1,9 +1,19 @@
 {
+<<<<<<< HEAD
+  "name": "web-scraper",
+=======
   "name": "web_scrappin_thing",
+>>>>>>> 2d6630221f7ca3d4874c1f6f60dc4eb0e5f4d209
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
+<<<<<<< HEAD
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+=======
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
@@ -17,6 +27,7 @@
     "url": "https://github.com/seangeleno/web_scrappin_thing/issues"
   },
   "homepage": "https://github.com/seangeleno/web_scrappin_thing#readme",
+>>>>>>> 2d6630221f7ca3d4874c1f6f60dc4eb0e5f4d209
   "dependencies": {
     "express": "^4.13.3",
     "morgan": "^1.6.1",
