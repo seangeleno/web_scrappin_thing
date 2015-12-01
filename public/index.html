@@ -19,29 +19,29 @@
         <div class="form-group">
           <label for="urlInput">URL to Scrape</label>
           <input type="text" class="form-control" id="urlInput" placeholder="Put url here">
-          <button type="button" class="btn btn-default">Submit</button>
-          <button type="button" id="search" name="Search">Search</button>
+          <button type="button" id='submit' class="btn btn-default">Submit</button>
+
         </div>
       </form>
     </div>
 
     <script type="text/javascript">
 
-      var url;
 
-    $('#urlInput').on('click', function(){
-      url = $('#urlInput').val()
-    })
 
-$('#search').on('click', function(){
+$('#submit').on('click', function(){
+  var url = $('#urlInput').val()
+  if(url){
     $.ajax({
-			url: 'http://api.diffbot.com/v3/analyze?token=07993a5215057bd2de990ea69cd5cd87&url=http://techcrunch.com/2015/11/30/lucidcam-hits-its-100k-campaign-goal-team-partners-with-sephora-on-vr-content/',
+			url: 'http://api.diffbot.com/v3/analyze?token=07993a5215057bd2de990ea69cd5cd87&url=' + url,
 			method: 'GET',
 			success: function (data) {
 				console.log(data)
-        console.log(data.title)
+        var title = (data.title)
+        $('body').append('<div class="well">' + title + '</div>')
 			}
 		})
+  }
 })
     </script>
 
